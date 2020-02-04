@@ -4,14 +4,16 @@ let equipoMaria = [62, 34, 55];
 let equipoPaula = [35, 60, 59];
 let equipoRebeca = [40, 39, 63];
 
-let mediaMaria = equipoMaria[0] + equipoMaria[1] + equipoMaria[2] / equipoMaria.length;
-let mediaPaula = equipoPaula[0] + equipoPaula[1] + equipoPaula[2] / equipoPaula.length;
-let mediaRebeca = equipoRebeca[0] + equipoRebeca[1] + equipoRebeca[2] / equipoRebeca.length;
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+let Maria = equipoMaria.reduce(reducer) / equipoMaria.length;
+let Paula = equipoPaula.reduce(reducer) / equipoPaula.length;
+let Rebeca = equipoRebeca.reduce(reducer) / equipoRebeca.length;
 
-if (mediaMaria >= mediaPaula || mediaRebeca) {
-  console.log(equipoMaria);
-} else if (mediaPaula >= mediaMaria || mediaRebeca) {
-  console.log(equipoPaula);
-} else if (mediaRebeca >= mediaMaria || mediaPaula) {
-  console.log(equipoRebeca);
+if (Maria >= Paula || Rebeca) {
+  console.log('El equipo de Maria tiene una media mas alta');
+} else if (Paula >= Maria || Rebeca) {
+  console.log('El equipo de Paula tiene una media mas alta');
+} else if (Rebeca >= Maria || Paula) {
+  console.log('El equipo de Rebeca tiene una media mas alta');
 }
+
