@@ -9,11 +9,11 @@ let Maria = equipoMaria.reduce(reducer) / equipoMaria.length;
 let Paula = equipoPaula.reduce(reducer) / equipoPaula.length;
 let Rebeca = equipoRebeca.reduce(reducer) / equipoRebeca.length;
 
-if (Maria >= Paula || Rebeca) {
+if (Maria >= Paula && Maria >= Rebeca) {
   console.log('El equipo de Maria tiene una media mas alta');
-} else if (Paula >= Maria || Rebeca) {
+} else if (Paula >= Maria && Paula >= Rebeca) {
   console.log('El equipo de Paula tiene una media mas alta');
-} else if (Rebeca >= Maria || Paula) {
+} else {
   console.log('El equipo de Rebeca tiene una media mas alta');
 }
 
