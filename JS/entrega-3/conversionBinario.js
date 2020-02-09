@@ -1,5 +1,7 @@
 "use strict";
 
-const binario = "1000";
+let binario;
+binario = prompt('Introduce un numero binario');
 const decimal = parseInt(binario, 2);
 console.log(decimal);
+
