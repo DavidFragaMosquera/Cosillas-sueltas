@@ -15,7 +15,7 @@ class Item {
 
   // Metodo estatico para generar inventario
   // nombre de articulos con sus precios
-  static getInventory(names, prices) {
+  static getInventary(names, prices) {
     return names.map((name, index) => {
       return new Item(name, prices[index]);
     });
@@ -72,7 +72,7 @@ class Shop {
   }
 }
 // Inventario, productos con sus precios
-const myCatalogo = Item.getInventory(itemNames, itemPrices);
+const myCatalogo = Item.getInventary(itemNames, itemPrices);
 console.log(myCatalogo);
 
 // Usuario con sus productos en el carrito
