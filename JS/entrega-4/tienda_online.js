@@ -1,19 +1,30 @@
-"use strict";
+'use strict';
 
-const itemNames = ["Camisa", "Pantalon", "Calcetines"];
-const itemPrices = ["13", "27", "100"];
+const itemNames = ['Camisa', 'Pantalon', 'Calcetines'];
+const itemPrices = [13, 27, 100];
+
+//############################
+// ### C l a s s   I t e m ###
+//############################
 
 class Item {
-  constructor(itemNames, itemPrices) {
-    this.itemNames = itemNames;
-    this.itemPrices = itemPrices;
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
   }
-  static getInventary(itemNames, itemPrices) {
-    return itemNames.map((itemName, index) => {
-      return new Item(itemName, itemPrices[index]);
+
+  // Metodo estatico para generar inventario
+  // nombre de articulos con sus precios
+  static getInventory(names, prices) {
+    return names.map((name, index) => {
+      return new Item(name, prices[index]);
     });
   }
 }
+
+//####################################
+// ### C l a s s   C a r t I t e m ###
+//####################################
 
 class CartItem {
   unit = 1;
@@ -25,25 +36,29 @@ class CartItem {
   }
 }
 
+//############################
+// ### C l a s s   U s e r ###
+//############################
+
 class User {
   cart = [];
-  constructor(name, cart) {
+  constructor(name) {
     this.name = name;
-    this.cart = cart;
   }
-  addToCart() {
-    for (const itemCart of this.cart) {
-      if (item.name === itemCart.item.name) {
-        CartItem.increase();
-      } else {
-        this.cart.push(new CartItem(item));
-      }
+
+  addToCart(item) {
+    const itemInCart = this.cart.find((i) => i.item.name === item.name);
+
+    if (itemInCart) {
+      itemInCart.increase();
+    } else {
+      this.cart.push(new CartItem(item));
     }
   }
-  fillCart(limit, catalogue) {
+  fillCart(limit, catalogo) {
     for (let i = 0; i < limit; i++) {
-      const itemIndex = Math.round(Math.random() * catalogue.length);
-      this.addToCart(catalogue[itemIndex]);
+      const itemIndex = Math.floor(Math.random() * catalogo.length);
+      this.addToCart(catalogo[itemIndex]);
     }
   }
   pay(shop) {
@@ -52,20 +67,16 @@ class User {
 }
 class Shop {
   checkout(cart) {
-    for (const CartItem of cart) {
+    for (const cartItem of cart) {
     }
   }
 }
+// Inventario, productos con sus precios
+const myCatalogo = Item.getInventory(itemNames, itemPrices);
+console.log(myCatalogo);
 
-const myItems = new Item(itemNames, itemPrices);
-console.log(myItems);
-const myCatalogue = Item.getInventary(itemNames, itemPrices);
-console.log(Item.getInventary(itemNames, itemPrices));
-console.log(myItems);
-const cart = [];
-cart.push(new CartItem(catalogue[2]));
-cart[0].increase();
-console.log(cart);
-const myUser = new User("Amancio");
-myUser.fillCart(5, myCatalogue);
+// Usuario con sus productos en el carrito
+const myUser = new User('Tito Amancio');
+myUser.fillCart(8, myCatalogo);
 console.log(myUser);
+
