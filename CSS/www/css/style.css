@@ -1,0 +1,132 @@
+/* * {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", arial;
+  max-width: 600px;
+}
+
+header.principal {
+  background: url(/img/antelope.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+}
+
+header.principal h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: grid;
+  margin-top: ;
+} */
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", arial;
+}
+
+header.principal {
+  background: url(/img/antelope.jpeg);
+  background-size: cover;
+  text-align: center;
+
+  background-position: center;
+  padding-bottom: 10rem;
+  padding-top: 1rem;
+}
+.cabecera h1 {
+  color: white;
+  font-size: 3rem;
+}
+.cabecera button {
+  background: black;
+  color: white;
+  align-items: flex-start;
+  padding: 0.5rem 1rem;
+  margin-right: 2rem;
+}
+
+main section h1 {
+  margin: 2rem 1rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main section p {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+main {
+  background-color: rgb(207, 122, 24);
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  text-align: center;
+}
+
+article header img {
+  margin-bottom: 0;
+}
+
+article header h1 {
+  color: white;
+  background-color: black;
+  font-size: 3rem;
+  margin-top: -0.3rem;
+  padding: 1rem 0;
+}
+
+article p {
+  color: white;
+  background-color: black;
+  padding: 1.5rem;
+  font-weight: bold;
+}
+article button {
+  padding: 1rem 8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+section.formulario h1 {
+  color: orange;
+  font-size: 3rem;
+  margin-left: 2rem;
+  margin: 2rem 1rem;
+}
+form {
+  border: none;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  font-size: 1.75rem;
+  padding: 0 4rem;
+}
+
+form input {
+  background-color: orange;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form select {
+  background: orange;
+}
+
+form textarea {
+  background: orange;
+}
