@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Conversor de divisas</title>
+  </head>
+
+  <body>
+    <h1>
+      Conversor de divisas
+    </h1>
+    <p>
+      Introduce una cantidad en la moneda que desees y automaticamente tendrás
+      la conversion a las otras monedas disponibles!
+    </p>
+    <div class="divisa">
+      <div class="nombre">Euros</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        data-cambio="1"
+        step="0.25"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <div class="divisa">
+      <div class="nombre">Dólares</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        id="USD"
+        step="0.25"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <div class="divisa">
+      <div class="nombre">Libras</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        id="GBP"
+        step="0.25"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <div class="divisa">
+      <div class="nombre">Yenes</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        id="JPY"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <div class="divisa">
+      <div class="nombre">Pesos Mexicanos</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        id="MXN"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <div class="divisa">
+      <div class="nombre">Francos Suizos</div>
+      <input
+        class="value"
+        type="number"
+        value="1"
+        id="CHF"
+        onChange="valorCambiado(this)"
+      />
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
