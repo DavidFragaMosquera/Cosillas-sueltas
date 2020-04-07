@@ -3,147 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utah</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap"
-      rel="stylesheet"
-    />
+    <title>CSS Mejorado</title>
   </head>
-
   <body>
-    <header class="principal">
-      <nav class="cabecera">
-        <h1>Utah</h1>
-        <a href="">Sobre Utah</a>
-        <a href="">Maps</a>
-        <button>Comprar</button>
+    <header id="principal">
+      <h1>Coruña</h1>
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">LogIn</a></li>
+        </ul>
       </nav>
+      <div><a href="#comprar">Comprar</a></div>
     </header>
+
+    <section id="intro">
+      <h1>Nuestra ciudad</h1>
+      <p>
+        El característico escudo de la ciudad está muy presente en el mobiliario
+        público, representado en farolas, papeleras e incluso en el pavimento
+        urbano. Está formado por un fondo azur, sobre el cual aparece
+        representada la Torre de Hércules, asentada sobre unas peñas y
+        acompañada de siete veneras de oro, puestas tres a cada flanco y una en
+        punta. Quizás el elemento más llamativo sea la presencia de una calavera
+        con dos tibias, simbolizando en la mitología el triunfo de Hércules
+        sobre Gerión, cuyos restos habría enterrado en los cimientos del faro.
+      </p>
+      <p>
+        Según esta leyenda, Hércules luchó contra Gerión, un rey venido de
+        Troya. Hércules, que le venía persiguiendo desde Cádiz, al encontrarle
+        en la península coruñesa, mantiene con él una lucha cruel de la que sale
+        vencedor Hércules, decapitando al vencido Gerión en una pequeña
+        península llena de grandes piedras, junto al mar. En honor al enemigo
+        vencido, edificó encima la famosa Torre, que figura en el escudo de La
+        Coruña desde 1521.30​
+      </p>
+    </section>
+
     <main>
-      <section>
-        <h1>Lorem Ipsum</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
-          debitis animi excepturi consectetur reprehenderit consequuntur nostrum
-          corporis voluptatibus facere quaerat deserunt minima labore explicabo
-          sit quam beatae aut dolorem inventore, deleniti tempore iste a. Sed
-          animi laudantium veritatis perferendis, facere quidem iure id beatae
-          ipsa tempore illum dolore praesentium, impedit accusamus eveniet
-          laboriosam quasi tenetur atque dignissimos illo? Ad, nesciunt?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-          explicabo eaque repellat, rem sequi quibusdam, est unde voluptatibus
-          ipsa nostrum soluta praesentium tempore? Doloribus reiciendis fugit
-          aperiam recusandae distinctio rerum maiores saepe harum, voluptas nam
-          fugiat incidunt impedit eos totam eligendi illum beatae corporis sed
-          vero tempora delectus blanditiis atque?
-        </p>
+      <section id="opciones">
+        <ul>
+          <li>
+            <article>
+              <header>
+                <img src="/img/coru1.jpg" alt="coruñita" />
+                <h1>Coruñitah</h1>
+              </header>
+              <section>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Maiores neque quas, non laudantium adipisci dignissimos
+                  temporibus. Fuga voluptatem eveniet ipsam ipsum ex rerum fugit
+                  recusandae quis commodi. Itaque temporibus eaque ratione
+                  sapiente natus?
+                </p>
+                <a href="#comprar">Comprar</a>
+              </section>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <header>
+                <img src="/img/coru2.jpg" alt="coruñita" />
+                <h1>Coruñitah</h1>
+              </header>
+              <section>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Maiores neque quas, non laudantium adipisci dignissimos
+                  temporibus. Fuga voluptatem eveniet ipsam ipsum ex rerum fugit
+                  recusandae quis commodi. Itaque temporibus eaque ratione
+                  sapiente natus?
+                </p>
+                <a href="#comprar">Comprar</a>
+              </section>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <header>
+                <img src="/img/coru3.jpg" alt="coruñita" />
+                <h1>Coruñitah</h1>
+              </header>
+              <section>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Maiores neque quas, non laudantium adipisci dignissimos
+                  temporibus. Fuga voluptatem eveniet ipsam ipsum ex rerum fugit
+                  recusandae quis commodi. Itaque temporibus eaque ratione
+                  sapiente natus?
+                </p>
+                <a href="#comprar">Comprar</a>
+              </section>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section id="formulario">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+        <form action="">
+          <fieldset>
+            <label for="nombre">Nombre y apellidos</label>
+            <input type="text" id="nombre" name="nombre" />
+          </fieldset>
+
+          <fieldset>
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" />
+          </fieldset>
+
+          <fieldset>
+            <label for="provincia">Provincia</label>
+            <select name="provincia" id="provincia">
+              <option value="coruña">Coruña</option>
+              <option value="lugo">Lugo</option>
+              <option value="ourense">Ourense</option>
+              <option value="pontevedra">Pontevedra</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="ancho">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios"></textarea>
+          </fieldset>
+
+          <fieldset class="ancho">
+            <label for="newsletter">Recibir newsletter?</label>
+            <input type="checkbox" id="newsletter" name="newsletter" />
+          </fieldset>
+
+          <button class="boton">Enviar</button>
+        </form>
       </section>
     </main>
-
-    <main>
-      <ul>
-        <li>
-          <article>
-            <header>
-              <img src="/img/horsehoe.jpeg" alt="HorseHoe Bend" />
-              <h1>HorseHoe</h1>
-            </header>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati, consequuntur! Perferendis, cupiditate laboriosam iure
-              voluptatum voluptatibus deleniti, voluptatem rerum fugiat
-              voluptate earum quae facilis optio non quas provident sapiente
-              exercitationem? Sequi velit soluta dicta doloribus ipsum
-              voluptates odio odit voluptatum!
-            </p>
-            <button>Comprar</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <header>
-              <img src="/img/Utah.jpeg" alt="Utah" />
-              <h1>Utah</h1>
-            </header>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati, consequuntur! Perferendis, cupiditate laboriosam iure
-              voluptatum voluptatibus deleniti, voluptatem rerum fugiat
-              voluptate earum quae facilis optio non quas provident sapiente
-              exercitationem? Sequi velit soluta dicta doloribus ipsum
-              voluptates odio odit voluptatum!
-            </p>
-            <button>Comprar</button>
-          </article>
-        </li>
-        <li>
-          <article>
-            <header>
-              <img src="/img/zion.jpeg" alt="Zion" />
-              <h1>Zion</h1>
-            </header>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati, consequuntur! Perferendis, cupiditate laboriosam iure
-              voluptatum voluptatibus deleniti, voluptatem rerum fugiat
-              voluptate earum quae facilis optio non quas provident sapiente
-              exercitationem? Sequi velit soluta dicta doloribus ipsum
-              voluptates odio odit voluptatum!
-            </p>
-            <button>Comprar</button>
-          </article>
-        </li>
-      </ul>
-    </main>
-
-    <section class="formulario">
-      <h1>
-        <p>Lorem ipsum, dolor sit</p>
-        <p>amet consectetur</p>
-        <p>adipisicing elit.</p>
-      </h1>
-      <form>
-        <fieldset>
-          <ul>
-            <li>
-              <label for="user">Nombre y apellidos</label>
-              <input type="text" name="user" id="user" />
-            </li>
-
-            <li>
-              <label for="adress">Dirección</label>
-              <input type="adress" name="adress" id="adress" />
-            </li>
-
-            <li>
-              <label for="Provincia">Provincia</label>
-              <select name="Provincia" id="Provincia" required>
-                <option value="">Selecciona..</option>
-                <option value="40">A Coruña</option>
-                <option value="30">Lugo</option>
-                <option value="20">Ourense</option>
-                <option value="10">Pontevedra</option>
-              </select>
-            </li>
-
-            <li>
-              <label for="Comentarios">Comentarios</label>
-              <textarea name="Comentarios">Comentarios</textarea>
-            </li>
-            <li>
-              <label for="newslater">
-                <strong> Recibir newslater?</strong></label
-              >
-              <input type="checkbox" name="newslater" id="si" />
-            </li>
-          </ul>
-        </fieldset>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
   </body>
 </html>

@@ -1,132 +1,231 @@
-/* * {
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Arimo", arial;
-  max-width: 600px;
-}
-
-header.principal {
-  background: url(/img/antelope.jpeg);
-  background-size: cover;
-  background-position: center;
-  padding: 5rem 0;
-}
-
-header.principal h1 {
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  display: grid;
-  margin-top: ;
-} */
-
 * {
   box-sizing: content-box;
   margin: 0;
   padding: 0;
-  font-family: "Arimo", arial;
+  font-family: sans-serif, arial;
+  max-width: 600px;
 }
 
-header.principal {
-  background: url(/img/antelope.jpeg);
-  background-size: cover;
-  text-align: center;
-
-  background-position: center;
-  padding-bottom: 10rem;
-  padding-top: 1rem;
+html {
+  --orange: #f2994a;
+  --white: #ffffff;
+  --black: #222222;
+  --gray: #bbbbbb;
 }
-.cabecera h1 {
+
+/*     Etiquetas genericas      */
+
+h1 {
   color: white;
   font-size: 3rem;
+  margin: 1rem 1.5rem;
 }
-.cabecera button {
-  background: black;
-  color: white;
-  align-items: flex-start;
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: var(--orange);
+}
+
+body > main > section {
+  padding: 1rem;
+}
+
+.boton {
+  background: var(--black);
+  color: var(--white);
+  text-decoration: none;
   padding: 0.5rem 1rem;
-  margin-right: 2rem;
+  margin-top: 1rem;
 }
 
-main section h1 {
-  margin: 2rem 1rem;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-}
+/*     Header     */
 
-main section p {
-  margin-left: 1rem;
-  font-weight: bold;
-}
-
-main {
-  background-color: rgb(207, 122, 24);
-  padding-top: 0.5rem;
-  padding-bottom: 2rem;
-}
-ul {
-  list-style: none;
+header#principal {
+  background-image: url(/img/coru.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 25%;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 15rem;
+  margin-bottom: 2rem;
+}
+
+header#principal h1 {
+  margin: 0;
+}
+
+header#principal nav {
+  flex-grow: 1;
+}
+
+header#principal nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+header#principal nav ul li {
+  margin: 0 0.5rem;
+}
+
+header#principal nav ul li a {
+  color: var(--black);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+header#principal > a {
+  background: var(--white);
+  color: var(--black);
+  border-radius: 7%;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+/*  Section catalogo  */
+section#intro {
+  padding: 0.5rem 3rem;
+}
+
+section#opciones ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section#opciones ul li article {
+  background: var(--black);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+section#opciones ul li article header img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+section#opciones ul li article header h1 {
   text-align: center;
+  margin: 1.5rem 0;
+}
+section#opciones ul li article section p {
+  padding: 1rem;
 }
 
-article header img {
-  margin-bottom: 0;
-}
-
-article header h1 {
-  color: white;
-  background-color: black;
-  font-size: 3rem;
-  margin-top: -0.3rem;
+section#opciones ul li article section a {
+  background: var(--gray);
+  display: block;
   padding: 1rem 0;
+  text-align: center;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
 }
 
-article p {
-  color: white;
-  background-color: black;
-  padding: 1.5rem;
-  font-weight: bold;
-}
-article button {
-  padding: 1rem 8rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
+/* Section formulario */
+
+section#formulario {
+  background: var(--white);
 }
 
-section.formulario h1 {
-  color: orange;
-  font-size: 3rem;
-  margin-left: 2rem;
-  margin: 2rem 1rem;
-}
-form {
-  border: none;
+section#formulario h1 {
+  color: var(--orange);
+  margin-bottom: 2rem;
 }
 
-form button {
-  background-color: black;
-  color: white;
-  font-size: 1.75rem;
-  padding: 0 4rem;
+section#formulario form fieldset {
+  padding: 0;
+  border: 0;
 }
 
-form input {
-  background-color: orange;
-  padding-top: 0.5rem;
-  margin-bottom: 1rem;
+section#formulario form input:not([type="checkbox"]),
+section#formulario form select,
+section#formulario form textarea {
+  border: 2px solid var(--black);
+  background: var(--orange);
+  width: 100%;
+  padding: 0.25rem;
+  box-sizing: border-box;
 }
 
-form select {
-  background: orange;
+section#formulario form label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
-form textarea {
-  background: orange;
+section#formulario form fieldset:last-of-type label {
+  display: initial;
+}
+
+section#formulario form fieldset:last-of-type input {
+  vertical-align: middle;
+}
+
+/* Version Tablet + PC */
+
+@media (min-width: 700px) {
+  header#principal {
+    flex-direction: row;
+    align-items: baseline;
+    min-height: 30rem;
+  }
+
+  header#principal > * {
+    flex-basis: calc(100% / 3);
+  }
+
+  header#princopal nav {
+    order: -1;
+    flex-grow: 0;
+  }
+
+  header#principal h1 {
+    text-align: center;
+  }
+
+  header#principal div {
+    text-align: right;
+  }
+
+  section#intro p {
+    columns: 2;
+  }
+
+  section#opciones ul {
+    display: flex;
+  }
+
+  section#opciones ul li {
+    margin: 0 0.5rem;
+  }
+  section#opciones ul li article header img {
+    height: 15rem;
+  }
+
+  section#comprar form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section#comprar form fieldset {
+    flex-basis: 50%;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  section#comprar form fieldset.ancho {
+    flex-basis: 100%;
+  }
 }
