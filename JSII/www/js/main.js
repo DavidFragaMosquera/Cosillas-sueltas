@@ -1,3 +1,4 @@
+'use strict'
 const inputs = document.querySelectorAll(".value");
 
 const url =
