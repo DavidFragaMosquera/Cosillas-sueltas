@@ -22,8 +22,9 @@ app.use((error, req, res, next) => {
   console.error(error);
   res
     .status(404)
-    .send(`Error 404. La DeepWeb solo abre de 6 a 12, parguelas`);
+    .send(`Error 404. La DeepWeb solo abre de 6 a 12`);
 });
 
-app.listen(port);
-console.log(`Funcionando en hhtp://localhost:${port}`);
+app.listen(3000,() => {
+console.log('Servidor web iniciado');
+});

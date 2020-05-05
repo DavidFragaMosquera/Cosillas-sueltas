@@ -1,22 +1,37 @@
-'use strict'
 
-const fs = require('fs').promises;
+const path = require("path");
+const fs = require("fs").promises;
 
-const showFiles = fs.readFile()
+async function showFile(filePath) {
+  
+  try {
+    const absolutePath = path.resolve(filePath);
+    const pathInfo = await fs.stat(absolutePath);
 
-async function showMeFiles(data) {
-    try{
-        const info = await fs.stat(data);
-
-        if info.size < 10000 {
-            const content = await fs.readFile(data, 'utf-8');
-            console.log(`El contenido del fichero es ${content}`)
-        } else {
-            console.log(`No es posible leer archivos mayores de 10KB`)
-        }
-    } catch (error) {
-        console.error(`Hubo un error leyendo el fichero`)
+    if (!pathInfo.isFile()) {
+      throw new Error("La ruta no es un fichero");
     }
+
+    if (pathInfo.size > 10000) {
+      throw new Error("El fichero es demasiado grande");
+    }
+
+    const pathContent = await fs.readFile(absolutePath);
+
+    return pathContent.toString();
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
-showMeFiles(showFiles.toString())
+async function main() {
+  const arguments = process.argv.slice(2);
+  for (const argument of arguments) {
+    const content = await showFile(argument);
+    if (content) console.log(content);
+  }
+}
+
+main();
+
+
