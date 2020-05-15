@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  max-width: 1000px;
+  font-family: sans-serif;
+  
+
+}
+
+img {
+  vertical-align: middle;
+
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color:whitesmoke;
+  
+}
+
+figure{
+  font-size: 2rem;
+}
+
+dl{
+  padding: 1rem;
+  font-size: 1.2rem;
+}
