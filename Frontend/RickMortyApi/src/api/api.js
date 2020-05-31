@@ -10,6 +10,12 @@ function getAll(){
     .get(`${apiUrl}/character`)
 }
 
+function getChar(id){
+    return axios
+    .get(`${apiUrl}/character/`+id)
+}
+
 export default{
-    getAll
+    getAll,
+    getChar
 }

@@ -10,28 +10,29 @@
         {{char.id }}
       </p>
 
-      <h2>
+      <h2 >
           {{ char.name }}
       </h2>
 
       <p class="estado" :class="{green: char.status === 'Alive', red: status !== 'Alive'}">
           {{ char.status }}
       </p>
-
-      <p class="=gend"> 
+  
+      <p  class="gend"> 
+        <b style="color:rgb(78, 90, 100)">Gender:</b>
         {{ char.gender }} 
       </p>
 
-        <p>
-         Specie: {{ char.species }}
+        <b style="color:rgb(78, 90, 100)"> Specie:</b>
+          {{ char.species }} 
+      <p>
+        <b style="color:rgb(78, 90, 100)"> Origin:</b>
+          {{ char.origin.name }}
       </p>
 
       <p>
-         Origin: {{ char.origin.name }}
-      </p>
-
-      <p>
-         Last location: {{ char.location.name }}
+        <b style="color:rgb(78, 90, 100)"> Last location:</b>
+         {{ char.location.name }}
       </p> 
      
 </div>
@@ -49,6 +50,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
 .red{
   
   color: red;
@@ -58,7 +62,11 @@ export default {
  color:rgb(76, 211, 23);
 }
 div{
-  background: rgb(24, 22, 22);
+background: rgb(24, 22, 22);
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
  
 }
 .gral{
@@ -67,18 +75,16 @@ div{
 
 }
 .card{
+    width: 20%;
     margin: 1rem;
-    padding: 3rem; 
+    padding: 2rem; 
     background: rgb(32, 24, 24);
     color: rgb(76, 211, 23); 
     box-shadow: 3px 3px 4px 5px  rgb(78, 90, 100);
     border-radius: 2%;
     display: inline-block; 
-    align-items: center; 
     padding: 2rem;
-    font-size: 1.2rem;
-    flex-grow:unset;
-
+    font-size: 1.2rem; 
 }
 img{
   transition: transform .9s ease;
@@ -98,16 +104,19 @@ h2{
   font-size: 2rem;
   font-weight: bold;
   color: #01B4C6;
+  font-family: 'Chelsea Market', sans-serif;
   
 }
 .id{
   color:#01B4C6;
   text-decoration: overline;
+  font-size: 1.5rem;
 }
 
 .estado{
   font-size: 1.3rem;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 </style>

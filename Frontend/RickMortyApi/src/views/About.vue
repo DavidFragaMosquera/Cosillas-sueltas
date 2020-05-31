@@ -9,17 +9,24 @@
       Para ello he usado:
      </p>
       <p>
-      <a href="https://rickandmortyapi.com/">Rick and Morty API</a> y
-      </p>
+      <a href="https://rickandmortyapi.com/"> 👉 Rick and Morty API</a> y
+      </p> 
       <p>
-      <a href="https://www.npmjs.com/package/axios">Libreria de AXIOS</a>.
+      <a href="https://www.npmjs.com/package/axios"> 👉 Libreria de AXIOS</a>.
     </p>
-    <p>David Fraga Mosquera || 2020 || HAB</p>
-    <a class="me" href="https://vsco.co/puraniebla/gallery"> 👉 Chekeame 👈 </a>
+    <p>
+      <a class="me" href="https://vsco.co/puraniebla/gallery"> 👉 Chekeame 👈 </a>
+    </p>
+    <footer>
+    <p>David Fraga Mosquera || 2020 </p>
+    </footer>
   </div>
 </template>
 
 <style scoped>
+div{
+  height: 100vh;
+}
 
 h1{
   color: rgb(76, 211, 23);
