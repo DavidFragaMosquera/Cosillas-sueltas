@@ -1,6 +1,9 @@
 <template>
+<div>
+  <vue-headful title="Top Tracks" />
 <toptrackstab
 :tracks="tracks"></toptrackstab>
+<!-- EN CASO DE NO USAR UN COMPONENTE : -->
 <!--   <div class="tracks">
     <ul>
       <li
@@ -14,15 +17,19 @@
       </li>
     </ul>
   </div> -->
+  <footercustom></footercustom>
+</div>
 </template>
 
 <script>
 import api from '@/api/index.js'
 import toptrackstab from '@/components/TopTracksTab'
+import footercustom from '@/components/FooterCustomTab'
 
 export default {
   name: 'toptracks',
-  components: { toptrackstab },
+  components: { toptrackstab,
+                footercustom },
   created(){
   api.getTopTracks().then(response => (this.tracks = response.data.tracks.track))
 },
