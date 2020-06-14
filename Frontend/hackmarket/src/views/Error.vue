@@ -8,16 +8,14 @@
         <p>
           Esta pagina no existe :(
         </p>
-        <footercustom></footercustom>
     </div>
     
 </template>
 
 <script>
-import footercustom from '@/components/FooterCustomTab.vue'
+7
 export default {
     name:'Error',
-    components: { footercustom }
 };
 </script>
 

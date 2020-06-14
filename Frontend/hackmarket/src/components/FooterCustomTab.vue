@@ -10,7 +10,7 @@ export default {
   name: "footercustom",
   data() {
     return {
-      copyright: "David Fraga Mosquera, 1990 || 2020",
+      copyright: "🔵 David Fraga Mosquera, 1990 || 2020 🔵" ,
     };
   },
 };
@@ -21,6 +21,6 @@ p {
   font-family: sans-serif;
   font-size: 0.8rem;
   margin-top: 2rem;
-  color: purple;
+  color: grey;
 }
 </style>

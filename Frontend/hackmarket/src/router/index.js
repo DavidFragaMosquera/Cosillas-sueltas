@@ -20,7 +20,7 @@ Vue.use(VueRouter)
     name: 'About',
     component: () => import('../views/About.vue'), // si se hace asi no se importa arriba
     meta: {
-      allowAnonymous: true
+      allowAnonymous: false //ruta privada
     }
   },
   {
@@ -37,7 +37,7 @@ Vue.use(VueRouter)
   component: () => import('../views/AddClient.vue'),
   meta: {
     allowAnonymous: false,
-    allowNoAdmin: false
+    allowNoAdmin: false  //ruta solo para admins
   },
   beforeEnter: (to, from, next) => {
     if(to.meta.allowNoAdmin === false && !checkAdmin()) {
@@ -61,10 +61,29 @@ Vue.use(VueRouter)
 {
   path: '/products',
   name: 'Products',
-  component: () => import('../views/Productos.vue'),
+  component: () => import('../views/Home.vue'),
   meta: {
-    allowAnonymous: true //ruta publica
+    allowAnonymous: false //ruta privada
   }
+},
+{
+  path: '/clients',
+  name: 'Clients',
+  component: () => import('../views/Clients.vue'),
+  meta: {
+    allowAnonymous: false,
+    allowNoAdmin: false  //ruta solo para admins
+  },
+  beforeEnter: (to, from, next) => {
+    if(to.meta.allowNoAdmin === false && !checkAdmin()) {
+      next({
+        path: '/home',
+        query: { redirect: to.fullPath }
+      })
+  } else {
+    next()
+  }
+}
 },
 {
   path: '/*',

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <vue-headful title="Nuevo registro" />
+    <h1>¡Resgistrate!</h1>
     <p v-show="required">
       TIENES DATOS AÚN POR RELLENAR.
     </p>
@@ -31,6 +33,8 @@
 
 <script>
 import axios from "axios";
+import Swal from "sweetalert2";
+
 export default {
   name: "Registrer",
   data() {
@@ -71,8 +75,17 @@ export default {
           .catch(function(error) {
             console.log(error);
           });
+           Swal.fire({
+        icon: "success",
+        title: 'Usuario creado',
+        text: "Adelante, haz login y disfruta de nuestra maravillosa web😀 "
+      });
       } else {
-        alert("No has rellenado todos los campos.");
+                Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Faltan campos por rellenar',
+})
       }
     },
     emptyFields() {

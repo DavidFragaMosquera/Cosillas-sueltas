@@ -1,11 +1,15 @@
 <template>
   <div>
+    <vue-headful title="Añadir Cliente" />
+    <menucustom></menucustom>
+    <h2>Registrar nuevo cliente</h2>
     <p v-show="required">
       TIENES DATOS AÚN POR RELLENAR.
     </p>
     <!-- FORMULARIO -->
     <div>
-      <label for="nombre">Nombre:</label>
+      <form>
+      <label for="nombre">Nombre</label>
       <input
         type="text"
         name="nombre"
@@ -13,7 +17,7 @@
         v-model="nombre"
       />
       <br />
-      <label for="apellido">Apellido:</label>
+      <label for="apellido">Apellido</label>
       <input
         type="text"
         name="apellido"
@@ -21,7 +25,7 @@
         v-model="apellido"
       />
       <br />
-      <label for="ciudad">Ciudad:</label>
+      <label for="ciudad">Ciudad</label>
       <input
         type="text"
         name="ciudad"
@@ -29,7 +33,7 @@
         v-model="ciudad"
       />
       <br />
-      <label for="empresa">Empresa:</label>
+      <label for="empresa">Empresa</label>
       <input
         type="text"
         name="empresa"
@@ -41,14 +45,19 @@
       <button @click="addClient(nombre, apellido, ciudad, empresa)">
         CREAR
       </button>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import menucustom from "@/components/MenuCustom.vue"
+import Swal from "sweetalert2";
+
 export default {
   name: "AddClient",
+  components: { menucustom },
   data() {
     return {
       nombre: "",
@@ -93,8 +102,17 @@ export default {
           .catch(function(error) {
             console.log(error);
           });
+          Swal.fire({
+        icon: "success",
+        title: 'Cliente creado',
+        text: "Puedes consultarlo en el apartado cliente del menú😀 "
+      });
       } else {
-        alert("No has rellenado todos los campos.");
+        Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'No has rellenado todos los campos',
+})
       }
     },
     emptyFields() {
@@ -111,4 +129,26 @@ export default {
 p {
   color: red;
 }
+
+form {
+  padding: 1rem;
+  color: orange;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+
+button{
+  color: white;
+  background: orange;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 20px;
+}
+
+
 </style>
